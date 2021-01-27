@@ -132,14 +132,14 @@ void Component::mirror()
 {
   if(!angle() || angle() == 180) {
     if(label_)
-      label_->scale(-1, 1);
+        label_->setTransform(QTransform::fromScale(-1,1),true);
     foreach(GraphicsNode* node, nodeList_)
-      node->scale(-1, 1);
+        node->setTransform(QTransform::fromScale(-1,1),true);
   } else {
     if(label_)
-      label_->scale(1, -1);
+        label_->setTransform(QTransform::fromScale(1,-1),true);
     foreach(GraphicsNode* node, nodeList_)
-      node->scale(1, -1);
+        node->setTransform(QTransform::fromScale(1,-1),true);
   }
 
   Item::mirror();
@@ -149,10 +149,10 @@ void Component::mirror()
 void Component::rotate()
 {
   foreach(GraphicsNode* node, nodeList_)
-    node->rotate(-90);
+      node->setRotation(node->rotation() - 90);
 
   if(label_)
-    label_->rotate(-90);
+      label_->setRotation(label_->rotation() - 90);
 
   Item::rotate();
 }

@@ -383,7 +383,7 @@ void RotateItems::undo()
     if(item)
       item->rotateBack();
     else
-      graphicsItem->rotate(-90);
+        graphicsItem->setRotation(graphicsItem->rotation()-90);
   }
 }
 
@@ -395,7 +395,7 @@ void RotateItems::redo()
     if(item)
       item->rotate();
     else
-      graphicsItem->rotate(90);
+        graphicsItem->setRotation(graphicsItem->rotation()+90);
   }
 }
 
@@ -428,7 +428,7 @@ void MirrorItems::undo()
     if(item)
       item->mirror();
     else
-      graphicsItem->scale(-1, 1);
+        graphicsItem->setTransform(QTransform::fromScale(-1,1),true);
   }
 }
 
@@ -440,7 +440,7 @@ void MirrorItems::redo()
     if(item)
       item->mirror();
     else
-      graphicsItem->scale(-1, 1);
+        graphicsItem->setTransform(QTransform::fromScale(-1,1),true);
   }
 }
 
