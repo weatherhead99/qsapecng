@@ -43,6 +43,7 @@
 #include <QtCore/QRegExp>
 #include <QtCore/QCryptographicHash>
 #include <QtCore/QPointer>
+#include <QtCore/QMimeData>
 
 #include <QtGui/QKeyEvent>
 #include <QtWidgets/QMenu>

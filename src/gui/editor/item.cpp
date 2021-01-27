@@ -20,7 +20,7 @@
 #include "gui/editor/item.h"
 #include "gui/editor/schematicscene.h"
 
-#include <QtGui/QGraphicsSceneMouseEvent>
+#include <QtWidgets/QGraphicsSceneMouseEvent>
 
 
 namespace qsapecng
@@ -62,8 +62,8 @@ Item::Item(QGraphicsItem* parent, SchematicScene* scene)
 void Item::mirror()
 {
   mirrored_ = !mirrored_;
-  scale(-1, 1);
-  translate(-boundingRect().width(), 0);
+  setTransform(QTransform::fromScale(-1,1),true);
+  setTransform(QTransform::fromTranslate(-boundingRect().width(),0), true);
 }
 
 
@@ -98,8 +98,8 @@ void Item::rotate()
   setTransform(transform);
 
   if(mirrored_) {
-    scale(-1, 1);
-    translate(-boundingRect().width(), 0);
+      setTransform(QTransform::fromScale(-1,1),true);
+      setTransform(QTransform::fromTranslate(-boundingRect().width(),0),true);
   }
 }
 

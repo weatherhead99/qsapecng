@@ -30,6 +30,7 @@
 #include <QtCore/QVariant>
 #include <QtCore/QMetaType>
 #include <QtCore/QPointer>
+#include <QtProperty>
 
 #include <memory>
 

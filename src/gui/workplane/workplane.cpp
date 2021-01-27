@@ -26,17 +26,17 @@
 
 #include <QtCore/QRegExp>
 #include <QtGui/QRegExpValidator>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QFormLayout>
-#include <QtGui/QGroupBox>
-#include <QtGui/QLineEdit>
-#include <QtGui/QDoubleSpinBox>
-#include <QtGui/QPushButton>
-#include <QtGui/QLabel>
-#include <QtGui/QTableWidget>
-#include <QtGui/QHeaderView>
-#include <QtGui/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QFormLayout>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QFrame>
 
 #include <qwt_plot_grid.h>
 #include <qwt_plot_canvas.h>
