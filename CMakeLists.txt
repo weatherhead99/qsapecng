@@ -1,5 +1,6 @@
-project( qsapecng )
-cmake_minimum_required( VERSION 2.8 )
+project( qsapecng CXX)
+cmake_minimum_required( VERSION 3.6 )
+set(CMAKE_CXX_STANDARD 17)
 
 # qtcreator lacks a proper file management for software based on cmake,
 # this is a workaround to include file within the project tree.

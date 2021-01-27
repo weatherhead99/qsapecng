@@ -1,22 +1,23 @@
 find_package( Boost 1.46.0 REQUIRED )
-find_package( Qt4 4.6.2 COMPONENTS QtCore QtGui REQUIRED )
-find_package( Qwt 6.0.0 REQUIRED )
+#find_package( Qt4 4.6.2 COMPONENTS QtCore QtGui REQUIRED )
+find_package(Qt5 COMPONENTS Core Gui Widgets PrintSupport REQUIRED)
+find_package( Qwt6)
 
 
 if(WIN32)
   set( QT_USE_QTMAIN 1 )
 endif(WIN32)
 
-include( ${QT_USE_FILE} )
-add_definitions( ${QT_DEFINITIONS} )
+#include( ${QT_USE_FILE} )
+#add_definitions( ${QT_DEFINITIONS} )
 
-include_directories(
-  ${QT_INCLUDES}
-  ${QWT_INCLUDE_DIRS}
-  ${Boost_INCLUDE_DIRS}
-  ${CMAKE_CURRENT_BINARY_DIR}
-  ${CMAKE_CURRENT_SOURCE_DIR}
-)
+# include_directories(
+#   ${QT_INCLUDES}
+#   ${QWT6_INCLUDE_DIRS}
+#   ${Boost_INCLUDE_DIRS}
+#   ${CMAKE_CURRENT_BINARY_DIR}
+#   ${CMAKE_CURRENT_SOURCE_DIR}
+# )
 
 
 ### PLATFORM SPECIFIC DATA ###
@@ -117,12 +118,12 @@ elseif(WIN32)
   endif(NOT QWT_DLL_DIR STREQUAL "QWT_DLL_DIR-NOTFOUND")
 endif()
 
-set(
-  LIBS
-  ${LIBS} 
-  ${QT_LIBRARIES}
-  ${QWT_LIBRARIES}
-)
+# set(
+#   LIBS
+#   ${LIBS} 
+#   ${QT_LIBRARIES}
+#   ${QWT_LIBRARIES}
+# )
 
 IF(WIN32)
   set(
@@ -135,99 +136,100 @@ IF(WIN32)
 ENDIF(WIN32)
 
 
-set(
-  qtpropertyeditor_SRCS
-  gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/qtpropertymanager.cpp
-  gui/qtsolutions/qtpropertyeditor/qteditorfactory.cpp
-  gui/qtsolutions/qtpropertyeditor/qtvariantproperty.cpp
-  gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/qtbuttonpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/qtgroupboxpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/qtpropertybrowserutils.cpp
-)
+# set(
+#   qtpropertyeditor_SRCS
+#   gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtpropertymanager.cpp
+#   gui/qtsolutions/qtpropertyeditor/qteditorfactory.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtvariantproperty.cpp
+#   gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtbuttonpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtgroupboxpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtpropertybrowserutils.cpp
+# )
 
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowser.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertymanager.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qteditorfactory.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtvariantproperty.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtvariantproperty.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qttreepropertybrowser.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtbuttonpropertybrowser.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtbuttonpropertybrowser.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtgroupboxpropertybrowser.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtgroupboxpropertybrowser.cpp
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.moc
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.moc
-)
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.moc
-)
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowser.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertymanager.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qteditorfactory.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtvariantproperty.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtvariantproperty.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qttreepropertybrowser.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtbuttonpropertybrowser.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtbuttonpropertybrowser.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtgroupboxpropertybrowser.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtgroupboxpropertybrowser.cpp
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.cpp
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertymanager.moc
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.cpp
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qteditorfactory.moc
+# )
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.cpp
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.moc
+# )
 
-set(
-  qtpropertyeditor_HEADERS_ONLY_MOC
-  gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qtpropertymanager.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qteditorfactory.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qtvariantproperty.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qttreepropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qtbuttonpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/moc_qtgroupboxpropertybrowser.cpp
-  gui/qtsolutions/qtpropertyeditor/qtpropertymanager.moc
-  gui/qtsolutions/qtpropertyeditor/qteditorfactory.moc
-  gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.moc
-)
+# set(
+#   qtpropertyeditor_HEADERS_ONLY_MOC
+#   gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qtpropertymanager.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qteditorfactory.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qtvariantproperty.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qttreepropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qtbuttonpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/moc_qtgroupboxpropertybrowser.cpp
+#   gui/qtsolutions/qtpropertyeditor/qtpropertymanager.moc
+#   gui/qtsolutions/qtpropertyeditor/qteditorfactory.moc
+#   gui/qtsolutions/qtpropertyeditor/qttreepropertybrowser.moc
+# )
 
-set_source_files_properties(
-  ${qtpropertyeditor_HEADERS_ONLY_MOC}
-  PROPERTIES
-    HEADER_FILE_ONLY true
-)
+# set_source_files_properties(
+#   ${qtpropertyeditor_HEADERS_ONLY_MOC}
+#   PROPERTIES
+#     HEADER_FILE_ONLY true
+# )
 
-qt4_generate_moc(
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertybrowserutils_p.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowserutils_p.cpp
-)
+# qt4_generate_moc(
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/qtpropertybrowserutils_p.h
+#   ${CMAKE_CURRENT_SOURCE_DIR}/gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowserutils_p.cpp
+# )
 
-set(
-  qtpropertyeditor_HEADERS_MOC
-  gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowserutils_p.cpp
-)
+# set(
+#   qtpropertyeditor_HEADERS_MOC
+#   gui/qtsolutions/qtpropertyeditor/moc_qtpropertybrowserutils_p.cpp
+# )
 
-set(
-  qtpropertyeditor_MOC
-  ${qtpropertyeditor_HEADERS_MOC}
-  ${qtpropertyeditor_HEADERS_ONLY_MOC}
-)
+# set(
+#   qtpropertyeditor_MOC
+#   ${qtpropertyeditor_HEADERS_MOC}
+#   ${qtpropertyeditor_HEADERS_ONLY_MOC}
+# )
 
-qt4_add_resources(
-  qtpropertyeditor_RESOURCES
-  gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.qrc
-)
+# qt4_add_resources(
+#   qtpropertyeditor_RESOURCES
+#   gui/qtsolutions/qtpropertyeditor/qtpropertybrowser.qrc
+# )
+
 
 set(
   qsapecng_SRCS
@@ -258,27 +260,27 @@ set(
   gui/workplane/workplane.cpp
 )
 
-set(
-  qsapecng_HEADERS_MOC
-  gui/qsapecngwindow.h
-  gui/extendedmdiarea.h
-  gui/configdialog/configdialog.h
-  gui/configdialog/configpage.h
-  gui/sidebarmodel.h
-  gui/sidebarview.h
-  gui/delegate.h
-  gui/qlogger.h
-  gui/editor/schematiceditor.h
-  gui/editor/propertytextitem.hpp
-  gui/editor/metacircuit_thread.hpp
-  gui/editor/schematicscene.h
-  gui/editor/schematicview.h
-  gui/workplane/workplane.h
-)
+# set(
+#   qsapecng_HEADERS_MOC
+#   gui/qsapecngwindow.h
+#   gui/extendedmdiarea.h
+#   gui/configdialog/configdialog.h
+#   gui/configdialog/configpage.h
+#   gui/sidebarmodel.h
+#   gui/sidebarview.h
+#   gui/delegate.h
+#   gui/qlogger.h
+#   gui/editor/schematiceditor.h
+#   gui/editor/propertytextitem.hpp
+#   gui/editor/metacircuit_thread.hpp
+#   gui/editor/schematicscene.h
+#   gui/editor/schematicview.h
+#   gui/workplane/workplane.h
+# )
 
-qt4_wrap_cpp( qsapecng_MOC ${qsapecng_HEADERS_MOC} )
+#qt4_wrap_cpp( qsapecng_MOC ${qsapecng_HEADERS_MOC} )
 
-qt4_add_resources(
+qt5_add_resources(
   qsapecng_RESOURCES
   gui/qsapecng.qrc
 )
@@ -289,12 +291,12 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY "../${OUTPUT_BIN_FOLDER}" )
 add_executable(
   qsapecng WIN32 MACOSX_BUNDLE
   gui/qsapecng.rc
-  ${qsapecng_MOC}
+  #${qsapecng_MOC}
   ${qsapecng_SRCS}
   ${qsapecng_RESOURCES}
-  ${qtpropertyeditor_MOC}
-  ${qtpropertyeditor_SRCS}
-  ${qtpropertyeditor_RESOURCES}
+  #${qtpropertyeditor_MOC}
+  #${qtpropertyeditor_SRCS}
+  #${qtpropertyeditor_RESOURCES}
   "${BUNDLE_ICON}"
 # qtcreator lacks a proper file management for software based on cmake,
 # this is a workaround to include file within the project tree
@@ -303,7 +305,9 @@ add_executable(
   ${DOXY}
 )
 
-target_link_libraries( qsapecng ${LIBS} )
+target_link_libraries( qsapecng Qt5::Core Qt5::Gui Qt5::Widgets Qt5::PrintSupport Qwt6::Qwt6 )
+target_include_directories( qsapecng PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+set_target_properties(qsapecng PROPERTIES AUTOMOC ON)
 
 set_target_properties(qsapecng
   PROPERTIES
