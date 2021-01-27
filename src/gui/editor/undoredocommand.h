@@ -23,7 +23,7 @@
 
 #include "gui/editor/schematicscene.h"
 
-#include <QtGui/QUndoCommand>
+#include <QtWidgets/QUndoCommand>
 
 #include <QtCore/QPointF>
 #include <QtCore/QLineF>
