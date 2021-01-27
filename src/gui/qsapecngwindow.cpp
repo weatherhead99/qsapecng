@@ -35,56 +35,56 @@
 #include "gui/sidebarmodel.h"
 #include "gui/sidebarview.h"
 
-#include "gui/qtsolutions/qtpropertyeditor/QtTreePropertyBrowser"
-#include "gui/qtsolutions/qtpropertyeditor/QtButtonPropertyBrowser"
+#include <QtTreePropertyBrowser>
+#include <QtButtonPropertyBrowser>
 
-#include <QtGui/QProgressBar>
+#include <QtWidgets/QProgressBar>
 
-#include <QtGui/QMdiArea>
-#include <QtGui/QMdiSubWindow>
+#include <QtWidgets/QMdiArea>
+#include <QtWidgets/QMdiSubWindow>
 
-#include <QtGui/QTabWidget>
+#include <QtWidgets/QTabWidget>
 
-#include <QtGui/QMessageBox>
-#include <QtGui/QDialogButtonBox>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QDialogButtonBox>
 
 #include <QtCore/QFile>
 #include <QtCore/QFileInfo>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QTextEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QAction>
-#include <QtGui/QToolBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QTextEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QToolBox>
 #include <QtGui/QTextDocument>
-#include <QtGui/QGroupBox>
-#include <QtGui/QPlainTextEdit>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QPlainTextEdit>
 
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QStatusBar>
-#include <QtGui/QDockWidget>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QDockWidget>
 
 #include <QtCore/QSignalMapper>
 #include <QtGui/QCloseEvent>
-#include <QtGui/QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 
-#include <QtGui/QUndoView>
-#include <QtGui/QUndoGroup>
-#include <QtGui/QUndoStack>
+#include <QtWidgets/QUndoView>
+#include <QtWidgets/QUndoGroup>
+#include <QtWidgets/QUndoStack>
 
-#include <QtGui/QFileSystemModel>
-#include <QtGui/QTreeView>
+#include <QtWidgets/QFileSystemModel>
+#include <QtWidgets/QTreeView>
 
-#include <QtGui/QPrinter>
-#include <QtGui/QPrintDialog>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/QPrintDialog>
 
-#include <QtGui/QGridLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QApplication>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QApplication>
 
 #include <limits>
 

@@ -23,7 +23,7 @@
 
 #include "gui/editor/item.h"
 
-#include <QtGui/QGraphicsTextItem>
+#include <QtWidgets/QGraphicsTextItem>
 #include <QtGui/QPainterPath>
 #include <QtGui/QPen>
 

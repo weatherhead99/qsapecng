@@ -27,7 +27,7 @@
 #include <QtCore/QSet>
 #include <QtCore/QFileInfo>
 #include <QtCore/QPointer>
-#include <QtGui/QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 
 #include <sstream>
 #include <memory>

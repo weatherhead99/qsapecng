@@ -19,8 +19,8 @@
 
 #include "gui/editor/graphicsnode.h"
 
-#include <QtGui/QGraphicsTextItem>
-#include <QtGui/QGraphicsScene>
+#include <QtWidgets/QGraphicsTextItem>
+#include <QtWidgets/QGraphicsScene>
 #include <QtGui/QPainter>
 
 

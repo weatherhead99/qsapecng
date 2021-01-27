@@ -30,15 +30,14 @@
 #include "gui/settings.h"
 #include "gui/qlogger.h"
 
-#include "gui/qtsolutions/qtpropertyeditor/QtBoolPropertyManager"
-#include "gui/qtsolutions/qtpropertyeditor/QtGroupPropertyManager"
-#include "gui/qtsolutions/qtpropertyeditor/QtStringPropertyManager"
+#include <QtBoolPropertyManager>
+#include <QtGroupPropertyManager>
+#include <QtStringPropertyManager>
+#include <QtLineEditFactory>
+#include <QtCheckBoxFactory>
+#include <QtAbstractPropertyBrowser>
+#include <QtProperty>
 
-#include "gui/qtsolutions/qtpropertyeditor/QtLineEditFactory"
-#include "gui/qtsolutions/qtpropertyeditor/QtCheckBoxFactory"
-
-#include "gui/qtsolutions/qtpropertyeditor/QtAbstractPropertyBrowser"
-#include "gui/qtsolutions/qtpropertyeditor/QtProperty"
 
 #include <QtCore/QEvent>
 #include <QtCore/QRegExp>
@@ -46,15 +45,15 @@
 #include <QtCore/QPointer>
 
 #include <QtGui/QKeyEvent>
-#include <QtGui/QMenu>
+#include <QtWidgets/QMenu>
 #include <QtGui/QPainter>
-#include <QtGui/QFileDialog>
-#include <QtGui/QUndoCommand>
-#include <QtGui/QGraphicsView>
-#include <QtGui/QGraphicsSceneMouseEvent>
-#include <QtGui/QGraphicsSceneDragDropEvent>
-#include <QtGui/QGraphicsSceneContextMenuEvent>
-#include <QtGui/QApplication>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QUndoCommand>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QGraphicsSceneMouseEvent>
+#include <QtWidgets/QGraphicsSceneDragDropEvent>
+#include <QtWidgets/QGraphicsSceneContextMenuEvent>
+#include <QtWidgets/QApplication>
 #include <QtGui/QClipboard>
 
 #include <sstream>

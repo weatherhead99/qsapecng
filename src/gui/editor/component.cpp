@@ -21,7 +21,7 @@
 #include "gui/editor/graphicsnode.h"
 #include "gui/editor/wire.h"
 
-#include <QtGui/QGraphicsScene>
+#include <QtWidgets/QGraphicsScene>
 #include <QtGui/QPainter>
 
 

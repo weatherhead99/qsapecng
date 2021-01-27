@@ -138,7 +138,7 @@ ENDIF(WIN32)
 #note currently requires a git submodule checkout (possibly not ideal)
 add_subdirectory(gui/QtPropertyBrowser)
 
-set(
+set(qsapecng_SRCS
   logger/logger.cpp
   model/circuit.cpp
   model/metacircuit.cpp
@@ -179,7 +179,6 @@ add_executable(
 # qtcreator lacks a proper file management for software based on cmake,
 # this is a workaround to include file within the project tree
 # see also files statements.
-  ${FILES}
   ${DOXY}
 )
 

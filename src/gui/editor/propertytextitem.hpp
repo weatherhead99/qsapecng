@@ -23,7 +23,7 @@
 
 #include <QtWidgets/QGraphicsTextItem>
 
-#include "gui/qtsolutions/qtpropertyeditor/QtProperty"
+#include <QtProperty>
 
 
 namespace qsapecng

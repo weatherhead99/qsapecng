@@ -23,13 +23,14 @@
 #include "gui/editor/wire.h"
 #include "gui/editor/item.h"
 
-#include "gui/qtsolutions/qtpropertyeditor/QtBoolPropertyManager"
-#include "gui/qtsolutions/qtpropertyeditor/QtStringPropertyManager"
-#include "gui/qtsolutions/qtpropertyeditor/QtProperty"
+#include <QtBoolPropertyManager>
+#include <QtStringPropertyManager>
+#include <QtProperty>
+
 
 #include <QtCore/QPointF>
 #include <QtCore/QPointer>
-#include <QtGui/QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 
 #ifndef Q_MOC_RUN
 #include <boost/assign.hpp>

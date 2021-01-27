@@ -24,7 +24,7 @@
 #include "gui/editor/inode.h"
 #include "gui/editor/item.h"
 
-#include <QtGui/QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 #include <QtGui/QPainterPath>
 
 #include <QtCore/QExplicitlySharedDataPointer>

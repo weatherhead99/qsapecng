@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # this is a workaround to include file within the project tree.
 # see also add_executable statement.
 file(GLOB_RECURSE FILES src/*.h src/*.hpp src/*.cpp)
-file(GLOB_RECURSE DOXY doxy.cfg doxy/*.dox)
+#file(GLOB_RECURSE DOXY doxy.cfg doxy/*.dox)
 
 set(
   CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}

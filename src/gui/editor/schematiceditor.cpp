@@ -21,7 +21,7 @@
 #include "parser/parser_factory.h"
 #include "parser/crc_circuit.h"
 
-#include "gui/qtsolutions/qtpropertyeditor/QtProperty"
+#include <QtProperty>
 #include "gui/editor/schematiceditor.h"
 #include "gui/editor/schematicsceneparser.h"
 #include "gui/settings.h"
@@ -29,13 +29,13 @@
 
 #include <QtCore/QPointer>
 #include <QtCore/QFileInfo>
-#include <QtGui/QFileDialog>
-#include <QtGui/QMessageBox>
-#include <QtGui/QPlainTextEdit>
-#include <QtGui/QUndoStack>
-#include <QtGui/QApplication>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QDialogButtonBox>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QUndoStack>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QDialogButtonBox>
 #include <QtGui/QFocusEvent>
 
 #include <fstream>
