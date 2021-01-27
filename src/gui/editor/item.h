@@ -21,7 +21,7 @@
 #define ITEM_H
 
 
-#include <QtGui/QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 #include <QtGui/QPen>
 
 

@@ -54,8 +54,9 @@ public:
 
   Qt::ItemFlags flags(const QModelIndex& index) const;
 
-  Qt::DropActions supportedDropActions() const;
-
+  Qt::DropActions supportedDropActions() const override;
+  Qt::DropActions supportedDragActions() const override;
+  
   QStringList mimeTypes() const;
   QMimeData* mimeData(const QModelIndexList& indexes) const;
 

@@ -21,7 +21,7 @@
 #define SIDEBARVIEW_H
 
 
-#include <QtGui/QListView>
+#include <QtWidgets/QListView>
 
 #include "gui/editor/schematicscene.h"
 

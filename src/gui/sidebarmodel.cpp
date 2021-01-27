@@ -32,7 +32,6 @@ namespace qsapecng
 SideBarModel::SideBarModel(QObject* parent)
   : QAbstractListModel(parent)
 {
-  setSupportedDragActions(Qt::CopyAction);
   setupSideBar();
 }
 
@@ -79,6 +78,11 @@ Qt::ItemFlags SideBarModel::flags(const QModelIndex& index) const
 Qt::DropActions SideBarModel::supportedDropActions() const
 {
   return Qt::IgnoreAction;
+}
+
+Qt::DropActions SideBarModel::supportedDragActions() const
+{
+    return Qt::CopyAction;
 }
 
 
