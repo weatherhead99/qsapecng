@@ -21,7 +21,7 @@
 #define EXTENDEDMDIAREA_H
 
 
-#include <QtGui/QMdiArea>
+#include <QtWidgets/QMdiArea>
 
 #include <QtGui/QDragEnterEvent>
 #include <QtGui/QDropEvent>

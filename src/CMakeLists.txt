@@ -306,7 +306,7 @@ add_executable(
 )
 
 target_link_libraries( qsapecng Qt5::Core Qt5::Gui Qt5::Widgets Qt5::PrintSupport Qwt6::Qwt6 )
-target_include_directories( qsapecng PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories( qsapecng PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 set_target_properties(qsapecng PROPERTIES AUTOMOC ON)
 
 set_target_properties(qsapecng

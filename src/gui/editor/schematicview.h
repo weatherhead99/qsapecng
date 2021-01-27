@@ -21,7 +21,7 @@
 #define SCHEMATICVIEW_H
 
 
-#include <QtGui/QGraphicsView>
+#include <QtWidgets/QGraphicsView>
 #include <QtGui/QResizeEvent>
 
 

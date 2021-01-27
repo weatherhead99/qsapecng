@@ -26,7 +26,7 @@
 #include "gui/workplane/workplane.h"
 
 #include <QtCore/QMutexLocker>
-#include <QtGui/QMdiSubWindow>
+#include <QtWidgets/QMdiSubWindow>
 
 
 class QFocusEvent;
