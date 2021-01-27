@@ -1761,7 +1761,7 @@ void SchematicScene::binSelectedItems()
 
 void SchematicScene::bringToFrontSelectedItem()
 {
-  QGraphicsItem* item = itemAt(lastMousePressPos_);
+  QGraphicsItem* item = itemAt(lastMousePressPos_, QTransform());
   if(!item)
     return;
 
@@ -1774,7 +1774,7 @@ void SchematicScene::bringToFrontSelectedItem()
 
 void SchematicScene::sendToBackSelectedItem()
 {
-  QGraphicsItem* item = itemAt(lastMousePressPos_);
+  QGraphicsItem* item = itemAt(lastMousePressPos_, QTransform());
   if(!item)
     return;
 
@@ -2026,9 +2026,9 @@ void SchematicScene::mousePressEvent(QGraphicsSceneMouseEvent* event)
   }
 
   if(!hasActiveItem() && !hasUserDefReq() && !hasPendingWire()
-      && selectedItems().isEmpty() && itemAt(event->scenePos())) {
+      && selectedItems().isEmpty() && itemAt(event->scenePos(), QTransform())) {
     clearSelection();
-    itemAt(event->scenePos())->setSelected(true);
+    itemAt(event->scenePos(), QTransform())->setSelected(true);
   }
 
   QGraphicsScene::mousePressEvent(event);
@@ -2057,11 +2057,11 @@ void SchematicScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event)
 void SchematicScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent* event)
 {
   if(!hasActiveItem() && !hasUserDefReq() && !hasPendingWire()
-      && itemAt(event->scenePos())) {
-    if(SchematicScene::itemType(itemAt(event->scenePos()))
+      && itemAt(event->scenePos(), QTransform())) {
+    if(SchematicScene::itemType(itemAt(event->scenePos(), QTransform()))
         == SchematicScene::UserDefItemType)
     {
-      QGraphicsItem* item = itemAt(event->scenePos());
+      QGraphicsItem* item = itemAt(event->scenePos(), QTransform());
       QPointer<qsapecng::SchematicScene> rep =
         item->data(101).value< QPointer<qsapecng::SchematicScene> >();
 
@@ -2070,7 +2070,7 @@ void SchematicScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent* event)
     }
   }
 
-  if(SchematicScene::itemType(itemAt(event->scenePos()))
+  if(SchematicScene::itemType(itemAt(event->scenePos(), QTransform()))
       != SchematicScene::UserDefItemType)
     QGraphicsScene::mousePressEvent(event);
 }
