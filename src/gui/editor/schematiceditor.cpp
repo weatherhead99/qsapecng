@@ -524,3 +524,5 @@ void SchematicEditor::init()
 
 
 }
+
+#include "moc_schematiceditor.cpp"

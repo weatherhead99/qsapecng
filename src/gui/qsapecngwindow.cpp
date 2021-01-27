@@ -1662,3 +1662,5 @@ QSapecNGWindow& operator<<(QSapecNGWindow& window, const QString& str)
 
 
 }
+
+#include "moc_qsapecngwindow.cpp"

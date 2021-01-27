@@ -164,8 +164,13 @@ set(qsapecng_SRCS
   gui/editor/wire.cpp
   gui/editor/item.cpp
   gui/workplane/workplane.cpp
+  gui/editor/metacircuit_thread.cpp
+  gui/editor/schematicview.cpp
+  gui/editor/propertytextitem.cpp
   gui/qsapecng.qrc
   gui/qsapecng.rc
+  gui/qlogger.cpp
+  gui/extendedmdiarea.cpp
 )
 
 
