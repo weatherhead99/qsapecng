@@ -27,8 +27,10 @@ namespace qsapecng
 {
 
 
+//WARNING: qt5 port, this may not be the right thing to do!
 Item::Item(QGraphicsItem* parent, SchematicScene* scene)
-  : QGraphicsItem(parent, scene)
+//  : QGraphicsItem(parent, scene)
+    : QGraphicsItem(parent)
 {
   setFlags(
     QGraphicsItem::ItemIsMovable

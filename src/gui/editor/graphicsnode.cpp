@@ -27,12 +27,14 @@
 namespace qsapecng
 {
 
-
+//WARNING: Qt5 port, not sure wht this second argument actually does!
+    
 GraphicsNode::GraphicsNode(
       QGraphicsItem* parent,
       QGraphicsScene* scene
     )
-  : QGraphicsItem(parent, scene)
+//   : QGraphicsItem(parent, scene)
+    : QGraphicsItem(parent)
 {
   owner_ = qgraphicsitem_cast<Item*>(parent);
 
