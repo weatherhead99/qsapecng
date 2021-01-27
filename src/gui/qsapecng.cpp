@@ -19,10 +19,10 @@
 
 #include "gui/qsapecngwindow.h"
 
-#include <QtGui/QApplication>
-#include <QtGui/QSplashScreen>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QSplashScreen>
 #include <QtGui/QPixmap>
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QtCore/QString>
 
 

@@ -19,7 +19,7 @@
 
 #include "gui/delegate.h"
 
-#include <QtGui/QDoubleSpinBox>
+#include <QtWidgets/QDoubleSpinBox>
 #include <limits>
 
 

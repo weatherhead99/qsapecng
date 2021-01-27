@@ -21,7 +21,7 @@
 #define CONFIGPAGE_H
 
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 
 
 class QComboBox;

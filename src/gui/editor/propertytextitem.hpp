@@ -21,7 +21,7 @@
 #define PROPERTYTEXTITEM_H
 
 
-#include <QtGui/QGraphicsTextItem>
+#include <QtWidgets/QGraphicsTextItem>
 
 #include "gui/qtsolutions/qtpropertyeditor/QtProperty"
 

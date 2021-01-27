@@ -23,10 +23,10 @@
 
 #include "model/metacircuit.h"
 
-#include <QtGui/QWidget>
-#include <QtGui/QMenu>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QMenu>
 #include <QtGui/QContextMenuEvent>
-#include <QtGui/QPrinter>
+#include <QtPrintSupport/QPrinter>
 
 #include <QtCore/QObject>
 #include <QtCore/QVector>

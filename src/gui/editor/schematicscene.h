@@ -21,7 +21,7 @@
 #define SCHEMATICSCENE_H
 
 
-#include <QtGui/QGraphicsScene>
+#include <QtWidgets/QGraphicsScene>
 
 #include <QtCore/QList>
 #include <QtCore/QRect>

@@ -19,15 +19,15 @@
 
 #include "gui/configdialog/configdialog.h"
 
-#include <QtGui/QMessageBox>
-#include <QtGui/QPushButton>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QPushButton>
 
-#include <QtGui/QListWidget>
-#include <QtGui/QStackedWidget>
-#include <QtGui/QDialogButtonBox>
+#include <QtWidgets/QListWidget>
+#include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QDialogButtonBox>
 
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 
 
 namespace qsapecng

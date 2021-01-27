@@ -21,7 +21,7 @@
 #define QSAPECNGWINDOW_H
 
 
-#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QtCore/QModelIndex>
 
 #include "gui/workplane/workplane.h"

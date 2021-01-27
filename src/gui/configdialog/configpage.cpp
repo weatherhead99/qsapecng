@@ -22,21 +22,21 @@
 
 #include "logger/logger.h"
 
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 
-#include <QtGui/QComboBox>
-#include <QtGui/QPushButton>
-#include <QtGui/QGroupBox>
-#include <QtGui/QLabel>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QLabel>
 
 #include <QtCore/QSignalMapper>
 
-#include <QtGui/QFontDialog>
-#include <QtGui/QColorDialog>
+#include <QtWidgets/QFontDialog>
+#include <QtWidgets/QColorDialog>
 
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QGridLayout>
 
 
 namespace qsapecng
