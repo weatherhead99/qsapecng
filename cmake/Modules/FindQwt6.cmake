@@ -46,13 +46,17 @@ if (Qt5Gui_FOUND)
   get_target_property(QT_INCLUDE_DIR Qt5::Gui INTERFACE_INCLUDE_DIRECTORIES)
 endif ()
 
+message(STATUS "Qt include dir: ${QT_INCLUDE_DIR}")
+
 find_path ( QWT6_INCLUDE_DIR
   NAMES qwt_plot.h
   HINTS ${QT_INCLUDE_DIR}
   PATH_SUFFIXES qwt qwt-qt5 qwt6 qwt6-qt5
 )
 
+
 set ( QWT6_INCLUDE_DIRS ${QWT6_INCLUDE_DIR} )
+message(STATUS "Qwt6 include dir: ${QWT6_INCLUDE_DIR}")
 
 # version
 set ( _VERSION_FILE ${QWT6_INCLUDE_DIR}/qwt_global.h )
