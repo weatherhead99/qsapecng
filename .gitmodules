@@ -1,0 +1,3 @@
+[submodule "src/gui/QtPropertyBrowser"]
+	path = src/gui/QtPropertyBrowser
+	url = https://github.com/airpaio/QtPropertyBrowser.git
